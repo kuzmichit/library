@@ -19,4 +19,4 @@ console.log(iterate(attrs[1]))
   console.log($('div').eq('2').find('some').iter(this) )
 })*/
 
-console.log($('button'))
+console.log($('button').html())

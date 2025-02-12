@@ -8,7 +8,7 @@ const $ = function (selector) {
         }
 
         if (selector.tagName) {
-            this[0] = selector;
+            this[0] = selector; 
             this.length = 1;
             return this;
         }
@@ -19,5 +19,5 @@ const $ = function (selector) {
     };
 
     $.prototype.init.prototype = $.prototype;
-
+    
 export default $;

@@ -1,4 +1,7 @@
-$.prototype.html = function(content) {
+//import $ from '../lib.js'
+
+ const actions = () => { 
+  $.prototype.html = function(content) {
     for (let i=0; i<this.length; i++) {
       if(content) {
         this[i].innerHTML = content;
@@ -76,3 +79,5 @@ $.prototype.iter = function (obj) {
   
   return this;
 }
+};
+export default actions;
