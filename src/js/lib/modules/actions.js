@@ -1,16 +1,9 @@
 /**
- * Augments the provided query selection library `$` with additional DOM manipulation methods.
- * 
- * Methods added to the prototype of `$` include:
- * 
  * - `html(content)`: Gets or sets the innerHTML of the selected elements.
  * - `eq(i)`: Reduces the set of matched elements to the one at the specified index.
  * - `index()`: Returns the index of the first element within its parent's child elements.
  * - `find(selector)`: Finds all descendant elements that match the specified selector.
  * - `iter(obj)`: Iterates over the properties of the given object and logs them.
- *
- * This module is intended to enhance the functionality of the `$` library by 
- * providing convenient methods for common DOM operations.
  */
 const actions = ($) => { 
    
@@ -49,44 +42,39 @@ $.prototype.index = function () {
     
     return item == this[0];
   }
-  console.log(this[1])
+
   return childs.findIndex(findMyIndex)
 }
 
-$.prototype.find = function (selector) {
-  let numberOfElements = 0;
+$.prototype.find = function(selector) {
+  let numberOfItems = 0;
   let counter = 0;
-  
-  const copyObj = Object.assign({}, this)
-  
-  for(let i=0; i<copyObj; i++) {
-    let arr = copyObj.querySelectorAll(selector);
-    if(arr.length === 0) continue;
-    
-    
-    for (let j = 0; j < arr.length; j++) {
-      this[counter] = arr[j];
-      counter++;
-    }
-  
-    numberOfElements += arr.length;
+  const copyObj = Object.assign({}, this);
+  for (let i = 0; i < copyObj.length; i++) {
+      const arr = copyObj[i].querySelectorAll(selector);
+      if (arr.length == 0) {
+          continue;
+      }
+      for (let j = 0; j < arr.length; j++) {
+          this[counter] = arr[j];
+          counter++;
+      }
+      numberOfItems += arr.length;
   }
-  
-  this.length = numberOfElements;
-  let objLength = Object.keys.length;
-  for(; numberOfElements<objLength; numberOfElements++) {
-    delete this[numberOfElements];
-  }
-  
-  return this;
-}
 
-$.prototype.iter = function (obj) {
-  //const obj = this;
+  this.length = numberOfItems;
+  const objLength = Object.keys(this).length;
+  for (; numberOfItems < objLength; numberOfItems++) {
+      delete this[numberOfItems];
+  }
+  return this;
+};
+
+$.prototype.iterate = function () {
   
-  for(let item in obj) {
-    if (obj.hasOwnProperty(item)) {
-      console.log(item)
+  for(let item in this) {
+    if (this.hasOwnProperty(item)) {
+      console.log(item + ' ====> ' + this[item].textContent + ' ====> ' + this[item])
     }
   }
   

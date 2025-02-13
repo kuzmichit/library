@@ -18,6 +18,7 @@ const $ = function (selector) {
         return this;
     };
 
-    $.prototype.init.prototype = $.prototype;
+$.prototype.init.prototype = $.prototype;
+
     
 export default $;

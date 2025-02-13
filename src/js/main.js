@@ -15,8 +15,10 @@ console.log(iterate(attrs[1]))
 
 //console.log($('button').html())
 
-$('button').on('click', function () {
-  console.log($('div').eq('2').find('some'));
-})
+// $('button').on('click', function () {
+//   console.log($('div').eq('2').find('some'));
+// })
 
-// console.log($('button').click(()))
+
+  console.log($("div").find(".some").iterate()); // Ottiene il contenuto di #test
+  $(".active").html("Nuovo Contenuto!"); // Modifica il contenuto di #test
