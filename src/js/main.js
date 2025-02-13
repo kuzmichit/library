@@ -15,8 +15,8 @@ console.log(iterate(attrs[1]))
 
 //console.log($('button').html())
 
-/*$('button').on('click', function () {
-  console.log($('div').eq('2').find('some').iter(this) )
-})*/
+$('button').on('click', function () {
+  console.log($('div').eq('2').find('some'));
+})
 
-console.log($('button').html())
+// console.log($('button').click(()))

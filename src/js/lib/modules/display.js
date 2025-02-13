@@ -1,5 +1,3 @@
-import $ from '../core';
-
 const display = ($) => {
 
     $.prototype.show = function () {

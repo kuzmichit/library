@@ -55,11 +55,11 @@ $.prototype.index = function () {
 
 $.prototype.find = function (selector) {
   let numberOfElements = 0;
-  counter = 0;
+  let counter = 0;
   
   const copyObj = Object.assign({}, this)
   
-  for(i=0; i<copyObj; i++) {
+  for(let i=0; i<copyObj; i++) {
     let arr = copyObj.querySelectorAll(selector);
     if(arr.length === 0) continue;
     
