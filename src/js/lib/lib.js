@@ -1,10 +1,13 @@
 import $ from './core.js';
-window.$ = $;
-//$();
-/*import './modules/display';
-import './modules/classes';
-import './modules/handlers.js';*/
-import actions from './modules/actions.js'
 
-actions();
+import actions from './modules/actions.js'
+import display from './modules/display.js';
+import classes from './modules/classes.js';
+import handlers from './modules/handlers.js';
+
+actions($);
+display($);
+classes($);
+handlers($);
+
 export default $;

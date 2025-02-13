@@ -1,4 +1,6 @@
-$.prototype.addClass = function(...classNames) {
+const classes = ($) => { 
+
+$.prototype.addClass = function (...classNames) {
   for (let i = 0; i < this.length; i++) {
     if(!this[i].hasAttribute('class')) continue;
     this[i].classList.add(...classNames);
@@ -23,6 +25,7 @@ $.prototype.toggleClass = function(clazz) {
   }
 
   return this;
+  };
 };
 
-
+  export default classes;

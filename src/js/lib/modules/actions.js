@@ -1,7 +1,20 @@
-//import $ from '../lib.js'
-
- const actions = () => { 
-  $.prototype.html = function(content) {
+/**
+ * Augments the provided query selection library `$` with additional DOM manipulation methods.
+ * 
+ * Methods added to the prototype of `$` include:
+ * 
+ * - `html(content)`: Gets or sets the innerHTML of the selected elements.
+ * - `eq(i)`: Reduces the set of matched elements to the one at the specified index.
+ * - `index()`: Returns the index of the first element within its parent's child elements.
+ * - `find(selector)`: Finds all descendant elements that match the specified selector.
+ * - `iter(obj)`: Iterates over the properties of the given object and logs them.
+ *
+ * This module is intended to enhance the functionality of the `$` library by 
+ * providing convenient methods for common DOM operations.
+ */
+const actions = ($) => { 
+   
+ $.prototype.html = function(content) {
     for (let i=0; i<this.length; i++) {
       if(content) {
         this[i].innerHTML = content;

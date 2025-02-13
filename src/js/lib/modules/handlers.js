@@ -1,34 +1,39 @@
-$.prototype.on = function(eventName, cb) {
+const handlers = ($) => {
 
-  if (!eventName || !cb) return this;
+  $.prototype.on = function (eventName, cb) {
 
-  for (let i = 0; i < this.length; i++) {
-    this[i].addEventListener(eventName, cb)
-  }
+    if (!eventName || !cb) return this;
 
-  return this;
-};
+    for (let i = 0; i < this.length; i++) {
+      this[i].addEventListener(eventName, cb)
+    }
 
-$.prototype.click = function(handler) {
+    return this;
+  };
 
-  if (!handler) return this;
+  $.prototype.click = function (handler) {
 
-  for (let i = 0; i < this.length; i++) {
-    if (handler)
-      this[i].addEventListener('click', handler)
-    else this.click()
-  }
+    if (!handler) return this;
 
-  return this;
-};
+    for (let i = 0; i < this.length; i++) {
+      if (handler)
+        this[i].addEventListener('click', handler)
+      else this.click()
+    }
 
-$.prototype.off = function(eventName, cb) {
+    return this;
+  };
 
-  if (!eventName || !cb) return this;
+  $.prototype.off = function (eventName, cb) {
 
-  for (let i = 0; i < this.length; i++) {
-    this[i].removeEventListener(eventName, cb)
-  }
+    if (!eventName || !cb) return this;
 
-  return this;
-};
+    for (let i = 0; i < this.length; i++) {
+      this[i].removeEventListener(eventName, cb)
+    }
+
+    return this;
+  };
+}
+
+export default handlers;
