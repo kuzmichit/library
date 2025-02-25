@@ -1,9 +1,9 @@
 /**
- * - `html(content)`: Gets or sets the innerHTML of the selected elements.
+ *`html(content)`: Gets or sets the innerHTML of the selected elements.
  * - `eq(i)`: Reduces the set of matched elements to the one at the specified index.
  * - `index()`: Returns the index of the first element within its parent's child elements.
  * - `find(selector)`: Finds all descendant elements that match the specified selector.
- * - `iter(obj)`: Iterates over the properties of the given object and logs them.
+ * - `iterate(obj)`: Iterates over own the properties of the given object and logs them.
  */
 const actions = ($) => { 
    
@@ -22,7 +22,7 @@ const actions = ($) => {
 $.prototype.eq = function(i) {
   
   const swap =  this[i];
-  const objLength = Object.keys(this[i]).length
+  const objLength = Object.keys(this).length;
   
   for (let i = 0; i < objLength; i++) {
     delete this[i];
@@ -81,4 +81,24 @@ $.prototype.iterate = function () {
   return this;
 }
 };
+
+$.prototype.closest = function(selector) {
+
+  const counter = 0;
+  const objLength = Object.keys(this).length;
+  
+  for(let i=0; i<objLength; i++) {
+    this[i] = this[i].closest(selector);
+    counter++;
+  }
+
+  for (counter < objLength; i++) { finere 
+    delete this[i];
+  }
+
+  this[0] = swap;
+  this.length = 1;
+
+  return this;
+}
 export default actions;
