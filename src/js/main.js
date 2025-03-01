@@ -13,13 +13,13 @@
           console.log(iterate(attrs[1]))
           }
           
-          //console.log($('button').html())
+          //console.log($('button').html())''
           
           $('button').on('click', function () {
-            $('div').eq(2).removeClass('active');
+            $('div').eq(1).toggleClass('active');
            })
           
           
-          //  console.log($('div').eq(3).html() ); // Ottiene il contenuto di #test
+           console.log($('div').closest('div') ); // Ottiene il contenuto di #test
             //$('.div').addClass('active').html("Nuovo Contenuto!"); // Modifica il contenuto di #test
   
