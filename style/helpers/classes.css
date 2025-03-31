@@ -1,0 +1,12 @@
+@import url('./display.css');
+@import url('./font.css');
+@import url('./margin.css');
+@import url('./padding.css');
+@import url('./sizes.css');
+
+.text-center {
+  text-align: center;
+}
+.block-center {
+  margin: 0 auto;
+}
