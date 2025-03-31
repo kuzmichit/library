@@ -133,23 +133,4 @@ $.prototype.iterate = function () {
 }
 };
 
-$.prototype.closest = function(selector) {
-
-  const counter = 0;
-  const objLength = Object.keys(this).length;
-  
-  for(let i=0; i<objLength; i++) {
-    this[i] = this[i].closest(selector);
-    counter++;
-  }
-
-  for (counter < objLength; i++) { finere 
-    delete this[i];
-  }
-
-  this[0] = swap;
-  this.length = 1;
-
-  return this;
-}
 export default actions;

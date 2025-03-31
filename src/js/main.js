@@ -20,6 +20,6 @@
            })
           
           
-           console.log($('div').closest('div') ); // Ottiene il contenuto di #test
+           console.log($('div').closest('.findme') ); // Ottiene il contenuto di #test
             //$('.div').addClass('active').html("Nuovo Contenuto!"); // Modifica il contenuto di #test
   
