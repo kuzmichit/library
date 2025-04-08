@@ -25,3 +25,7 @@ button {
   background-color: var(--primary-color);
   text-align: center; 
 }
+
+.border {
+  border: 1px solid red;
+}

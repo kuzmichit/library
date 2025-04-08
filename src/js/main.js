@@ -13,10 +13,12 @@
           console.log(iterate(attrs[1]))
           }
           
-          //console.log($('button').html())''
+console.log($.prototype.fadeOut)
+  // $('div').eq(1).fadeOut(1000);
           
-          $('button').on('click', function () {
-            $('div').eq(1).toggleClass('active');
+          $('button').on('click', () => {
+            // $('div').eq(1).toggleClass('active');
+            $('div').eq(1).fadeOut(800);
            })
           
           
