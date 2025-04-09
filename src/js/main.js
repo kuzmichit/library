@@ -13,12 +13,11 @@
           console.log(iterate(attrs[1]))
           }
           
-console.log($.prototype.fadeOut)
-  // $('div').eq(1).fadeOut(1000);
-          
+          let a = $('div').eq(1);
+          console.log(a.attributes)
           $('button').on('click', () => {
-            // $('div').eq(1).toggleClass('active');
-            $('div').eq(1).fadeOut(800);
+            $('div').eq(3).toggleClass('active');
+            $('div').eq(2).fadeOut(800);
            })
           
           
