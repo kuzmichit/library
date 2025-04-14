@@ -14,10 +14,8 @@
           }
           
           let a = $('div').eq(1);
-          console.log(a.attributes)
-          $('button').on('click', () => {
-            $('div').eq(3).toggleClass('active');
-            $('div').eq(2).fadeOut(800);
-           })
+          console.log(a)
+          const touchEnd = () => $('button').dropdown();
+          $('button').on('touchend', touchEnd )
           
           

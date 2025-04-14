@@ -20,10 +20,6 @@
 }
 
 button {
-  width: 150px;
-  height: 40px;
-  background-color: var(--primary-color);
-  text-align: center; 
 }
 
 .border {

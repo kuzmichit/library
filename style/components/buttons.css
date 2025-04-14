@@ -12,6 +12,7 @@
   font-size: 14px;
   line-height: 1.5;
   transition: all 0.2s;
+  box-sizing: border-box;
 }
 
 .btn:hover {
