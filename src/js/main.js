@@ -14,7 +14,7 @@ const handler = (e) => {
 }
 let s = () => console.log(333);
 
-$('button').click(s)
+$('button').click(()=> $('button').dropdown())
 /*const touchEnd = () => {
 let id = setTimeout(() => $('button').dropdown(), 1000);
 }*/
