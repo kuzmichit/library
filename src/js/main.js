@@ -13,8 +13,9 @@ const handler = (e) => {
   console.log(iterate(attrs[1]))
 }
 let s = () => console.log(333);
+// $('.dropdown-toggle').dropdown()
 
-$('button').click(()=> $('button').dropdown())
+// $('button').click(()=> $('button').dropdown())
 /*const touchEnd = () => {
 let id = setTimeout(() => $('button').dropdown(), 1000);
 }*/
