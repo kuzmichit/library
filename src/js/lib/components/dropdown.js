@@ -14,7 +14,9 @@ const dropdown = ($) => {
     }
   };
 
-  // $('.dropdown-toggle').dropdown();
+  
+	// Uncomment this line to initialize dropdown on elements with class 'dropdown-toggle'
+	// $('.dropdown-toggle').dropdown(); 
 };
 
 export default dropdown;
